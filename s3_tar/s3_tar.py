@@ -354,6 +354,9 @@ class S3Tar:
         tar = tarfile.open(fileobj=source_tar_io, mode=mode)
         info = tarfile.TarInfo(name=name)
         info.size = source_io.tell()
+
+        logger.debug("_save_bytes_to_tar(): info.size=" + str(info.size))
+
         info.mtime = source_mtime
         source_io.seek(0)
         tar.addfile(tarinfo=info, fileobj=source_io)
