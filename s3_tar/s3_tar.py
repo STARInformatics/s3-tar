@@ -9,6 +9,7 @@ from .s3_mpu import S3MPU
 from .utils import _create_s3_client, _convert_to_bytes, _threads, MIN_S3_SIZE
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 
 class S3Tar:
