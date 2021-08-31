@@ -360,7 +360,7 @@ class S3Tar:
 
         if '|' in mode:
             # When using compression, the data is
-            # not writted to the fileobj until its done
+            # not written to the fileobj until its done
             tar.fileobj.close()
 
         return source_tar_io
